@@ -1,0 +1,7 @@
+Backend JayDiApps mobile apps
+
+- To run on container
+
+docker build -t jdbackend .
+
+docker run --publish 8001:8080 --name gocontainer jdbackend

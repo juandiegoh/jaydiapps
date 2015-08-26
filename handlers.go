@@ -12,7 +12,7 @@ import (
 
 // Index controller of /
 func Index(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "Welcome!\n")
+	fmt.Fprint(w, "Welcome to JayDiApps!\n")
 }
 
 // LoveIndex controller of /loves
@@ -20,7 +20,7 @@ func LoveIndex(w http.ResponseWriter, r *http.Request) {
 	responseAsJSON(w, love.FindAll(), http.StatusOK)
 }
 
-// LoveShow return Love with id {id}
+// LoveShow return Love with id {id} or 404
 func LoveShow(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	var loveID int
