@@ -27,9 +27,15 @@ var routes = Routes{
 		LoveIndex,
 	},
 	Route{
+		"LoveRandom",
+		"GET",
+		"/loves/random",
+		LoveRandom,
+	},
+	Route{
 		"LoveShow",
 		"GET",
-		"/loves/{id}",
+		"/loves/{id:[0-9]+}",
 		LoveShow,
 	},
 }

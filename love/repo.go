@@ -23,15 +23,36 @@ func init() {
 			"pt": "Voce e %s foram feitos um para o outro!",
 			"en": "%s and you are a match made in heaven!",
 		},
-		"http://image1.png",
+		"https://s3-sa-east-1.amazonaws.com/jaydiapps/love/alto.png",
 	})
 	CreateLove(Love{
 		2,
 		map[string]string{
-			"es": "Texto 2",
+			"es": "Si no lo estropeas tendrás suerte con %s",
+			"pt": "Se você não estragar tudo terá sorte com %s",
+			"en": "If you don't mess it up, it will last with %s",
 		},
-		"http://image2.png",
+		"https://s3-sa-east-1.amazonaws.com/jaydiapps/love/medioalto.png",
 	})
+	CreateLove(Love{
+		3,
+		map[string]string{
+			"es": "Mejor busca a otra persona, olvidate de %s",
+			"pt": "Melhor procurar outra pessoa, esquece %s",
+			"en": "Better off with somebody else, forget about %s",
+		},
+		"https://s3-sa-east-1.amazonaws.com/jaydiapps/love/medio.png",
+	})
+	CreateLove(Love{
+		4,
+		map[string]string{
+			"es": "Olvidate de %s, nunca estará contigo",
+			"pt": "Esquece %s, nunca estará contigo",
+			"en": "Forget it, you don't have a chance with %s",
+		},
+		"https://s3-sa-east-1.amazonaws.com/jaydiapps/love/bajo.png",
+	})
+
 }
 
 // CreateLove Creates new Love in DB

@@ -3,8 +3,10 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"math/rand"
 	"net/http"
 	"strconv"
+	"time"
 
 	"github.com/gorilla/mux"
 	"github.com/juandiegoh/jaydiapps/love"
@@ -36,6 +38,14 @@ func LoveShow(w http.ResponseWriter, r *http.Request) {
 
 	// If we didn't find it, 404
 	responseAsJSON(w, jsonErr{Code: http.StatusNotFound, Text: "Not Found"}, http.StatusNotFound)
+}
+
+// LoveRandom return a random value from Loves
+func LoveRandom(w http.ResponseWriter, rq *http.Request) {
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
+	ls := love.FindAll()
+	l := ls[r.Intn(len(ls))]
+	responseAsJSON(w, l, http.StatusOK)
 }
 
 func responseAsJSON(w http.ResponseWriter, o interface{}, status int) {
