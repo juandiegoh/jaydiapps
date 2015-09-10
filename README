@@ -29,3 +29,5 @@ env APP_EXEC='jaydiapps'
 exec start-stop-daemon --start --chuid ${USER} --chdir ${APP_DIR} --exec ${APP_DIR}${APP_EXEC}`
 
 sudo start jaydiapps
+
+# Redirect :80 to :8080
