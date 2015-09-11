@@ -27,7 +27,6 @@ func init() {
 
 func fixLastTimes() {
 	for {
-		log.Println(lastTimes)
 		for n, t := range lastTimes {
 			del := expvarTimeout(t)
 			if del {
