@@ -24,5 +24,8 @@ func NewRouter() *mux.Router {
 
 	}
 
+	// Expvar exposes variables via HTTP in JSON format.
+	router.Handle("/debug/vars", http.DefaultServeMux)
+
 	return router
 }
