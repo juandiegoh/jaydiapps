@@ -27,7 +27,6 @@ func init() {
 
 func fixLastTimes() {
 	for {
-		log.Println("Running FixLastTimes")
 		log.Println(lastTimes)
 		for n, t := range lastTimes {
 			del := expvarTimeout(t)
@@ -35,7 +34,6 @@ func fixLastTimes() {
 				resetExpvar(n, t)
 			}
 		}
-		log.Println("Finished running FixLastTimes")
 		time.Sleep(sleepTime)
 	}
 }
