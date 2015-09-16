@@ -36,14 +36,14 @@ env USER='ubuntu'
 env APP_DIR='/home/ubuntu/go/src/github.com/juandiegoh/jaydiapps/'
 env APP_EXEC='jaydiapps'
 
-exec start-stop-daemon --start --chuid ${USER} --chdir ${APP_DIR} --exec ${APP_DIR}${APP_EXEC} >> /home/ubuntu/go/logs/app.log 2>&1`
+exec start-stop-daemon --start --chuid ${USER} --chdir ${APP_DIR} --exec ${APP_DIR}${APP_EXEC} 
 ```
 
-# create logs folder
+# Logs
 ```sh
-cd /home/ubuntu/; mkdir logs
 sudo start jaydiapps
 sudo service jaydiapps stop
+sudo tail -f /var/log/upstart/jaydiapps.log
 ```
 
 # Rotate logs
