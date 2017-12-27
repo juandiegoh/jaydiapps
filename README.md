@@ -111,7 +111,7 @@ sudo nginx
 
 to reaload when modified conf
 ```sh
-sudo nginx -s reaload
+sudo nginx -s reload
 ```
 
 to stop nginx
